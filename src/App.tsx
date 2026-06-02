@@ -285,7 +285,7 @@ export default function App() {
                     <span className="hover:text-brand-emerald transition-colors cursor-pointer" onClick={() => scrollToSection('skills')}>Capabilities</span>
                     <span className="hover:text-brand-emerald transition-colors cursor-pointer" onClick={() => scrollToSection('experience')}>Milestones</span>
                     <span className="hover:text-brand-emerald transition-colors cursor-pointer" onClick={() => scrollToSection('projects')}>Applications</span>
-                    <a href="/CV_Didik_Prasetyo_Mulyono.pdf" download="CV_Didik_Prasetyo_Mulyono.pdf" className="hover:text-brand-emerald transition-colors cursor-pointer no-underline text-slate-600">Download CV</a>
+                    <a href="/Resume_Didik_Eko_Pramono.pdf" download="Resume_Didik_Eko_Pramono.pdf" className="hover:text-brand-emerald transition-colors cursor-pointer no-underline text-slate-600">Download CV</a>
                   </div>
                 </div>
 

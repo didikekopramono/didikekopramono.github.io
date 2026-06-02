@@ -101,8 +101,8 @@ export default function Hero({ onNotify, onToggleResumeView }: { onNotify: (msg:
         <div className="flex flex-col sm:flex-row gap-4 mb-12">
           <a 
             id="btn-nav-download"
-            href="/CV_Didik_Prasetyo_Mulyono.pdf"
-            download="CV_Didik_Prasetyo_Mulyono.pdf"
+            href="/Resume_Didik_Eko_Pramono.pdf"
+            download="Resume_Didik_Eko_Pramono.pdf"
             onClick={handleDownload}
             className="flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-brand-emerald to-brand-teal text-slate-950 shadow-lg shadow-brand-emerald/20 hover:shadow-brand-emerald/40 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer no-underline"
           >
