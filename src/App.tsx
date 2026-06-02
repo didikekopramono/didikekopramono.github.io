@@ -141,6 +141,7 @@ export default function App() {
 
                 {/* Desktop Action Controls */}
                 <div className="hidden lg:flex items-center gap-3">
+                  {/* 
                   <button
                     onClick={() => setShowPrintMode(true)}
                     className="flex items-center gap-1.5 px-4 py-2 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-brand-indigo/40 transition-all rounded-xl font-bold text-xs cursor-pointer select-none"
@@ -156,6 +157,7 @@ export default function App() {
                     Share Port
                     <ArrowUpRight size={13} />
                   </button>
+                  */}
                 </div>
 
                 {/* Mobile Menu Toggle button */}
@@ -199,6 +201,7 @@ export default function App() {
                       ))}
                     </div>
 
+                    {/* 
                     <div className="flex flex-col gap-2.5 pt-4 border-t border-slate-900">
                       <button
                         onClick={() => {
@@ -222,6 +225,7 @@ export default function App() {
                         <ArrowUpRight size={13} />
                       </button>
                     </div>
+                    */}
                   </motion.div>
                 )}
               </AnimatePresence>

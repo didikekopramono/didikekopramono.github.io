@@ -22,31 +22,20 @@ export default function Contact({ onNotify }: { onNotify: (msg: string) => void 
       return;
     }
 
-    setFormState('validating');
-    setValidationLogs([]);
+    const subject = encodeURIComponent(
+      `Hiring / Professional Opportunity - ${formData.name}${formData.company ? ` (${formData.company})` : ''}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `${formData.company ? `Company: ${formData.company}\n` : ''}\n` +
+      `Message:\n${formData.message}\n\n` +
+      `---\nSent from didikekopramono.github.io`
+    );
 
-    const logSteps = [
-      "INIT: Intercepting client submission payload...",
-      "COMPLIANCE: Checking input strings for XSS and SQLi vulnerabilities...",
-      "IDENTITY: Synthesizing envelope fields for didactic-trace",
-      `ROUTING: Mapping routing queue for target [didikeko1997@gmail.com]`,
-      "STATUS: Form transmitted deterministically. Success!"
-    ];
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=didikekopramono483@gmail.com&su=${subject}&body=${body}`, '_blank');
 
-    let currentLogIndex = 0;
-    const interval = setInterval(() => {
-      if (currentLogIndex < logSteps.length) {
-        setValidationLogs(prev => [...prev, logSteps[currentLogIndex]]);
-        currentLogIndex++;
-      } else {
-        clearInterval(interval);
-        setTimeout(() => {
-          setFormState('done');
-          onNotify(`Message from ${formData.name} processed successfully!`);
-          setFormData({ name: '', company: '', message: '' });
-        }, 600);
-      }
-    }, 450);
+    onNotify(`Redirecting to email client...`);
+    setFormData({ name: '', company: '', message: '' });
   };
 
   return (
@@ -137,7 +126,7 @@ export default function Contact({ onNotify }: { onNotify: (msg: string) => void 
                   onSubmit={handleFormSubmit}
                   className="space-y-4"
                 >
-                  <p className="text-sm font-semibold text-white mb-4">Transmit a Project Query or Technical Message:</p>
+                  <p className="text-sm font-semibold text-white mb-4">Submit a Hiring Inquiry or Professional Message:</p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
