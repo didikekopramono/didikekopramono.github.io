@@ -126,7 +126,7 @@ export default function Contact({ onNotify }: { onNotify: (msg: string) => void 
                   onSubmit={handleFormSubmit}
                   className="space-y-4"
                 >
-                  <p className="text-sm font-semibold text-white mb-4">Submit a Hiring Inquiry or Professional Message:</p>
+                  <p className="text-sm font-semibold text-white mb-4">Want to hire me? Reach out via didikekopramono483@gmail.com</p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
@@ -137,7 +137,7 @@ export default function Contact({ onNotify }: { onNotify: (msg: string) => void 
                         required
                         value={formData.name}
                         onChange={handleInputChange}
-                        placeholder="e.g. Lead Engineer from Telkom"
+                        placeholder="e.g. Gina Anatasya, Talent Acquisition"
                         className="w-full px-4 py-3 bg-slate-950 rounded-xl text-slate-200 text-sm border border-slate-800 focus:border-brand-emerald focus:outline-none transition-all placeholder:text-slate-600"
                       />
                     </div>
@@ -163,7 +163,7 @@ export default function Contact({ onNotify }: { onNotify: (msg: string) => void 
                       rows={4}
                       value={formData.message}
                       onChange={handleInputChange}
-                      placeholder="Outline system requirements, job positions, or consultation proposals..."
+                        placeholder="e.g. Hi Didik, I came across your portfolio and would love to discuss a potential opportunity at our company."
                       className="w-full px-4 py-3 bg-slate-950 rounded-xl text-slate-200 text-sm border border-slate-800 focus:border-brand-emerald focus:outline-none transition-all placeholder:text-slate-600 resize-none"
                     />
                   </div>
