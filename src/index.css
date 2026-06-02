@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --color-brand-emerald: #059669;
+  --color-brand-teal: #0d9488;
+  --color-brand-purple: #7c3aed;
+  --color-brand-indigo: #4338ca;
+  --color-dark-bg: #f8fafc;
+  --color-dark-surface: #ffffff;
+  --color-dark-card: rgba(255, 255, 255, 0.7);
+}
+
+/* Custom Base Scrollbar for Light Mode */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Light Theme Overrides & Global Legibility enforcement */
+body, html {
+  background-color: #f8fafc !important;
+  color: #1e293b !important;
+}
+
+/* Background grid animation masking with super faint light lines */
+.fixed.inset-0.bg-\[linear-gradient\(to_right\2c \#0b0f19_1px\2c transparent_1px\2c linear-gradient\(to_bottom\2c \#0b0f19_1px\2c transparent_1px\)\)\] {
+  background-image: linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px), linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px) !important;
+}
+
+/* Override dark background gradients */
+.bg-\[radial-gradient\(ellipse_at_top\2c _var\(--tw-gradient-stops\)\)\] {
+  background-image: radial-gradient(ellipse at top, #eff6ff 10%, #f1f5f9 60%, #f8fafc 100%) !important;
+}
+
+/* Global utility overrides for light mode precision and legibility */
+.text-white {
+  color: #0f172a !important; /* deep slate-900 */
+}
+.text-slate-100 {
+  color: #1e293b !important; /* deep slate-800 */
+}
+.text-slate-200 {
+  color: #334155 !important; /* slate-700 */
+}
+.text-slate-300 {
+  color: #475569 !important; /* slate-600 */
+}
+.text-slate-400 {
+  color: #57657a !important; /* slate-500 */
+}
+
+/* Keep brand elements colored nicely */
+.text-brand-emerald {
+  color: #059669 !important; /* Rich green */
+}
+.text-brand-indigo {
+  color: #4338ca !important; /* Indigo primary */
+}
+.text-brand-purple {
+  color: #7c3aed !important;
+}
+
+/* Light Glassmorphism Panel styles */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(15, 23, 42, 0.07) !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.03), 0 2px 4px -1px rgba(15, 23, 42, 0.02) !important;
+}
+
+.glass-panel-glow {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(16, 185, 129, 0.22) !important;
+  box-shadow: 0 10px 30px -4px rgba(16, 185, 129, 0.06), 0 4px 6px -2px rgba(16, 185, 129, 0.02) !important;
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  color: #334155 !important;
+  backdrop-filter: blur(4px) !important;
+}
+
+.glass-pill:hover {
+  background: rgba(16, 185, 129, 0.05) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  color: #059669 !important;
+}
+
+/* Background elements styling */
+.bg-slate-950, .bg-slate-900, .bg-slate-950\/40, .bg-slate-900\/40, .bg-slate-900\/60, .bg-slate-900\/50, .bg-slate-950\/45, .bg-slate-950\/80, .bg-slate-950\/20 {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Dark color borders overriding */
+.border-white\/5, .border-white\/\[0\.04\], .border-slate-700, .border-slate-800, .border-slate-850, .border-slate-900 {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Subtle pastel background glows */
+.radial-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  opacity: 0.12 !important; /* very soft, luxurious pastel light halos */
+  z-index: 1;
+}
+
+/* Button overrides to maintain readable text values */
+#btn-nav-download {
+  color: #ffffff !important; /* Keep white on solid green CTA button */
+}
+
+#btn-nav-contact {
+  color: #1e293b !important;
+  background-color: #ffffff !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+#btn-nav-contact:hover {
+  border-color: #4f46e5 !important;
+}
+
+/* Inputs styling */
+input, textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+input:focus, textarea:focus {
+  border-color: #059669 !important;
+  box-shadow: 0 0 0 2px rgba(5, 150, 105, 0.1) !important;
+}
+
+/* Technical blueprint lines in About.tsx */
+.bg-slate-950\/80 {
+  background-color: #f8fafc !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+  color: #334155 !important;
+}
+
+/* Tabs & header pill adjustments */
+nav.hidden.lg\:flex {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Footer override to preserve premium corporate look but matching light theme */
+footer {
+  background-color: #ffffff !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+/* Formal resume printed page elements styling alignment */
+#print-paper-page {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+/* Print Stylesheet integration */
+@media print {
+  /* Set global defaults for printing */
+  html, body {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    font-size: 11pt !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Hide custom backgrounds, shadows, decorations, borders, and interactive items */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Make containers fit exactly to physical paper margins */
+  .print-page {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0.5in 0.5in !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    border: none !important;
+    page-break-after: always;
+  }
+
+  /* Avoid cutting half visual blocks */
+  .print-avoid-break {
+    page-break-inside: avoid !important;
+  }
+
+  /* Standard formatting overrides for printing */
+  h1, h2, h3, h4, .title {
+    color: #111827 !important;
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: bold !important;
+    page-break-after: avoid;
+  }
+
+  .print-link {
+    text-decoration: underline !important;
+    color: #1d4ed8 !important;
+  }
+
+  /* Grid layout adjustments for columns */
+  .print-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1.5fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .print-divider {
+    border-bottom: 1.5px solid #e5e7eb !important;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+}
